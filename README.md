@@ -15,7 +15,7 @@ Getting started
 
 2. Setup environment in R to load models trained in python using keras platform by using R script EnvSet.R provided in the directory EnvironmentSetup.
 
-3. Run individual codes from the figurewise directories.
+3. Run individual codes from the figure wise directories.
 
 Some notes
 
