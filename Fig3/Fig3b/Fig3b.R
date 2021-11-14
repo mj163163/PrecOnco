@@ -1,0 +1,28 @@
+##loading libraries
+library(GSVA)
+library(GSEABase)
+library(impute)
+library(tidyverse)
+library(keras)
+library(umap)
+library(ggplot2)
+
+
+##loading Predictions
+Predictions = read.csv("ATTX_predictions.csv",sep=",",header=T,stringsAsFactors = F,row.names = 1)
+
+##loading metadata
+labels = read.csv("metadata.csv",sep=",",header = T,row.names = 1)
+
+##UMAP
+set.seed(100)
+um = umap(t(Predictions),n_neighbors=10)
+
+df1 = cbind.data.frame(um$layout,labels$Samples)
+colnames(df1) = c("UMAP1","UMAP2","Samples")
+df1$Samples = as.factor(df1$Samples)
+
+df1$Samples <- factor(df1$Samples, levels = c("PRE-CX", "POST-CX","CRPC", "ENZS","ENZR"))
+ggplot(df1,aes(x = UMAP1, y = UMAP2)) +
+  geom_point(aes(color = Samples),size=6) + theme_classic()+scale_color_manual(values=c("PRE-CX"="#984EA3","POST-CX"="#FF7F00",CRPC="#E41A1C",ENZS="#4DAF4A",ENZR="#377EB8")) + guides(colour = guide_legend(override.aes = list(size=4)))
+
