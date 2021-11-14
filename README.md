@@ -1,7 +1,7 @@
 # PrecOnco
-Gene expression based inference of drug resistance in cancer
+Title: Gene expression based inference of drug resistance in cancer
 
-This resource provides codes to reproduce key results in the manuscript: Gene expression based inference of drug resistance in cancer.
+This resource provides code to reproduce key results in the manuscript: Gene expression based inference of drug resistance in cancer.
 
 Getting started
 
