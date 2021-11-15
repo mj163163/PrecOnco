@@ -1,6 +1,4 @@
 ##Loading libraries
-library(GSVA)
-library(GSEABase)
 library(keras)
 library(impute)
 library(tidyverse)
