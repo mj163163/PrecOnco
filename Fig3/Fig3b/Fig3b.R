@@ -1,9 +1,4 @@
 ##loading libraries
-library(GSVA)
-library(GSEABase)
-library(impute)
-library(tidyverse)
-library(keras)
 library(umap)
 library(ggplot2)
 
