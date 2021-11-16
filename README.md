@@ -15,9 +15,9 @@ Getting started
 
    Packages: keras, caret, ggpubr, GSEABase, GSVA, impute, tidyverse, pheatmap, ggplot2, ggridges, reshape2, umap, RColorBrewer, data.table, h2o, survival, survminer, readxl,  Polychrome, circlize, corrplot, tibble, scales
 
-2. Setup environment in R to load models trained in python using keras platform by using R script EnvSet.R provided in the directory EnvironmentSetup.
+3. Use R script EnvSet.R provided in the directory EnvironmentSetup to setup environment in R for loading python trained deep neural network models 
 
-3. Run individual codes from the figure wise directories for reproducing manuscript results.
+4. Run individual codes from the figure wise directories for reproducing manuscript results.
 
 Description
 
@@ -35,7 +35,7 @@ Fig4a folder contains script and data used for training AutoML models.
 Fig4b folder contains predictions obtianed on TCGA test dataset using best AutoML model and code for computing survival on these predictions.
 Fig4d-f folder contains codes for evaluating our model using external Wagle, Nikhil, et al. dataset. For drug response prediction we have used SKCM as a cancer type.
 
-5. Supplementary directory contains for reproducing supplementary figures. 
+5. Supplementary directory contains codes for reproducing supplementary figures. 
 
 Some notes
 
