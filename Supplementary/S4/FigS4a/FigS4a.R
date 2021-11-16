@@ -3,7 +3,7 @@ library(keras)
 library(impute)
 library(tidyverse)
 library(ggplot2)
-
+library(data.table)
 
 ##Source function
 source("DrugsPred.R")

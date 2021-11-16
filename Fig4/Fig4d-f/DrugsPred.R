@@ -1,3 +1,13 @@
+#' Title Drug response prediction using model trained on TCGA patient profiles 
+#'
+#' @param enrichment.scores pathway enrichment scores obtained using GSVA
+#' @param metadata metadata file containing drug molecular descriptors
+#' @param CancerType Cancer type to be used for input test dataset
+#'
+#' @return list of multiple data frames consisting of probability of response & probability of non-response along with predicted class label.
+#' @export
+#'
+#' @examples drugPred(enrichment.scores,metadata,"SKCM")
 drugPred = function(enrichment.scores,metadata,CancerType){
 
 pred = list()

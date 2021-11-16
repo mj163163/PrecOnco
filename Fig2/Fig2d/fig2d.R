@@ -3,6 +3,7 @@ library(keras)
 library(impute)
 library(tidyverse)
 library(pheatmap)
+library(data.table)
 
 ##source function
 source("DrugsPred.R")

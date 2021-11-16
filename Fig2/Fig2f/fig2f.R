@@ -3,7 +3,7 @@ library(keras)
 library(impute)
 library(tidyverse)
 library(reshape2)
-
+library(data.table)
 
 ##source function
 source("DrugsPred.R")

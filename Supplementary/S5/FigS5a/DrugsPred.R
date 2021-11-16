@@ -1,7 +1,16 @@
+#' Title Provides drug response predictions in terms of Z-score (IC50)
+#'
+#' @param enrichment.scores Pathway enrichment scores computed using GSVA
+#' @param metadata Metadata file contaiing information about cell lines and drugs along with molecular descriptors
+#' @param CancerType Cancer type to be used for input test dataset
+#'
+#' @return list of multiple data frames containing predicted Z-scores (LN IC50) values for each sample in the input test dataset
+#' @export
+#'
+#' @examples drugPred(enrichment.scores,metadata,"PRAD")
 drugPred = function(enrichment.scores,metadata,CancerType){
-
+  
 pred = list()
-new =list()
 for (i in 1:ncol(enrichment.scores)){
   expAve = as.matrix(enrichment.scores[,i])
   features = read.table("Features.csv",sep=",")[,1]
@@ -54,7 +63,6 @@ for (i in 1:ncol(enrichment.scores)){
   predictions=formatC(predictions)
   predictions = as.numeric(predictions)
   
-  library(data.table)
   data = cbind.data.frame(metainfo$DRUG_NAME,predictions)
   colnames(data) = c("DRUGS","Predictedvalue")
   mat=setDT(data)[, .SD[which.min(Predictedvalue)], by=DRUGS]

@@ -32,7 +32,7 @@ geneSets = getGmt("c2.cp.v6.1.symbols.gmt")
 enrichment.scores <- gsva(mat, geneSets, method="gsva")
 
 ##loading AutoML model
-model1 <- h2o.loadModel(path="D:\\PrecOnco_codes_figurewise\\Fig4\\Fig4d-f\\StackedEnsemble_AllModels_AutoML_20210812_215305")
+model1 <- h2o.loadModel(path="StackedEnsemble_AllModels_AutoML_20210812_215305")
 
 
 ##loading TCGA metadata file

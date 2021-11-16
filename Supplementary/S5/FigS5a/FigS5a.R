@@ -5,6 +5,7 @@ library(tidyverse)
 library(reshape2)
 library(ggridges)
 library(ggplot2)
+library(data.table)
 
 ##source function
 source("DrugsPred.R")
