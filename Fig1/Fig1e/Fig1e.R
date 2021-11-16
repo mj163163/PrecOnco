@@ -2,6 +2,8 @@ library(keras)
 library(GSEABase)
 library(GSVA)
 library(impute)
+library(data.table)
+
 
 ##Source function for drug response prediction
 source("DrugsPred.R")

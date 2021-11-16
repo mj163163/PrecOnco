@@ -4,6 +4,7 @@ library(impute)
 library(tidyverse)
 library(ggplot2)
 library(ggridges)
+library(data.table)
 
 ##Source function
 source("DrugsPred.R")
